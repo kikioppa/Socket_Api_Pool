@@ -18,23 +18,23 @@ public class TcpSocket {
 
         try {
 
-            //서버 접속
+            //Connect to server)
 
-            Socket socket = new Socket("211.59.10.133", 5984);
+            Socket socket = new Socket("IP",Port);
 
-            //Server에 보낼 데이터 
+            //Data for server
 
             BufferedWriter bufWriter = 
 
               new BufferedWriter( new OutputStreamWriter( socket.getOutputStream()));
 
-            bufWriter.write("request &response      constitution numb & stirngs           ");
+            bufWriter.write("request    constitution numb & stirngs           ");
           //  bufWriter.newLine();
             bufWriter.flush();
 
             
 
-            //Server가 보낸 데이터 출력
+            //Print data from server
 
             BufferedReader bufReader =
 
